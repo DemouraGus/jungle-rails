@@ -1,0 +1,20 @@
+<h1>Log In</h1>
+<%= form_tag session_path, method: :post do %>
+  <% if flash[:alert] %>
+    <div class="alert alert-danger"><%= flash[:alert] %></div>
+  <% end %>
+
+  <div>
+    <%= label_tag :email %>
+    <%= email_field_tag :email %>
+  </div>
+
+  <div>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+
+  <div>
+    <%= submit_tag "Log In" %>
+  </div>
+<% end %>

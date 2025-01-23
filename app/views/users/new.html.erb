@@ -1,0 +1,41 @@
+<h1>Register</h1>
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div class="alert alert-danger"
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div>
+    <%= f.submit "Register" %>
+  </div>
+<% end %>
