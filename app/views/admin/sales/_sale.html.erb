@@ -10,11 +10,11 @@
   </td>
   <td>
   <% if sale.finished? %>
-    <span class="label label-danger">Finished</span>
+    <span class="badge bg-danger">Finished</span>
   <% elsif sale.upcoming? %>
-    <span class="label label-warning">Upcoming</span>
+    <span class="badge bg-warning">Upcoming</span>
   <% else %>
-    <span class="label label-sucess">Active</span>
+    <span class="badge bg-success">Active</span>
   <% end %>
   </td>
   <td>
